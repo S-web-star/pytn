@@ -1,0 +1,16 @@
+import string
+
+def remove_punctuation(input_string):
+    # Create a translation table that maps punctuation characters to None
+    translator = str.maketrans('', '', string.punctuation)
+    
+    # Use the translate method to remove punctuation
+    result = input_string.translate(translator)
+    
+    return result
+
+# Example usage
+input_text = "Hello, world! How's everything going?"
+cleaned_text = remove_punctuation(input_text)
+print("Original Text:", input_text)
+print("Text without Punctuation:", cleaned_text)
